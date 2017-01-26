@@ -25,7 +25,5 @@ public class Pr02WriteInfoToFile {
         catch (IOException e){
             e.printStackTrace();
         }
-
-
     }
 }
