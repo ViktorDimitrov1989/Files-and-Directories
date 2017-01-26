@@ -7,14 +7,18 @@ public class Pr08NestedFolders {
         File root = new File(stringPath);
         ArrayDeque<File> dirs = new ArrayDeque<File>();
         dirs.offer(root);
+        int counter = 0;
         while (!dirs.isEmpty()){
             File current = dirs.removeFirst();
-
-
-
+            File[] currentDir = current.listFiles();
+            for (File file : currentDir) {
+                if(file.isDirectory()){
+                    dirs.addLast(file);
+                }
+            }
+            counter++;
+            System.out.println(current.getName());
         }
-
-
-
+        System.out.println(counter + " folders");
     }
 }

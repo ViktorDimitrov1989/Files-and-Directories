@@ -19,6 +19,7 @@ public class Pr02WriteInfoToFile {
                 if(!punctuation.contains(oneByte)){
                     fos.write(oneByte);
                 }
+
                 oneByte = fis.read();
             }
         }
